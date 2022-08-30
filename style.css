@@ -126,7 +126,7 @@
         font-size: 30px !important;
     }
     #form{
-        height: 830px;
+        height: 1000px;
         margin-left: 10%;
         margin-right: 10%;
     }
@@ -156,7 +156,7 @@
         margin-right: 10%;
     }
     .register{
-        height: 150vh;
+        height: 200vh;
     }
     .navbar-brand{
         display: none;
