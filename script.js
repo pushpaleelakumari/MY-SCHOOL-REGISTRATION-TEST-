@@ -103,6 +103,7 @@ function validate() {
         boolien7 = false;
     }
     if (boolien1 && boolien2 && boolien3 && boolien4 && boolien5 && boolien6 && boolien7) {
+        alert("Your Details Have Been Saved Successfully")
         thanks.style.display = "block"
         login.style.display = "none"
     }
