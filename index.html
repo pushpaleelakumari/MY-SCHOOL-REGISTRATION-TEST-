@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>School Registration Form</title>
+  <link rel="icon" href="logo.PNG">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+  <!------------------------------                     HOME PAGE                      -------------------->
+
+
+  <div class="container" style="margin: 0; width:100vw; max-width:100%;"><br><br>
+    <div class="container_back">
+      <nav class="navbar bg-dark bg-primary" id="nav">
+        <div class="container-fluid">
+          <a class="navbar-brand"><img src="logo.PNG" alt="" width="50" height="50" style="border-radius: 29px;"></a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="button"><b>Search</b></button>
+          </form>
+        </div>
+      </nav>
+      <div class="content"><br><br><br><br><br>
+        <h1>Welcome To <span style="color: orange;">My School</span></h1>
+        <h1>Best For Education</h1>
+        <div class="join" style="color: orange;">Join the My School now</div><br>
+        <div class="buttons">
+          <button type="button" onclick="join()">
+            <h5 style="margin-top: 6px;">Register Now</h5>
+          </button><br>
+          <h5 style="color: orange;">"Admissions are opened 50% scholarship if you register and take the test"</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------------------           REGISTRATION FORM            -------------------------->
+
+  <div class="register">
+    <h1 class="Registration-form" style="color: white;">Registration Form</h1>
+    <form class="row g-3 needs-validation" id="form" novalidate autocomplete="off">
+      <div class="col-md-4">
+        <label for="first-name" class="form-label">First Name<span style="color: red;">*</span></label>
+        <input type="text" class="form-control" id="first-name" placeholder="First Name*" autocomplete="off">
+        <div class="invalid-feedback" id="first-name-invalid">
+          Please Enter The Valid First name.
+        </div>
+        <div class="valid-feedback" id="first-name-valid">
+          Proceed!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="last-name" class="form-label">Last Name<span style="color: red;">*</span></label>
+        <input type="text" class="form-control" id="last-name" placeholder="Last Name*" autocomplete="off">
+        <div class="invalid-feedback" id="last-name-invalid">
+          Please Enter The Valid Last name.
+        </div>
+        <div class="valid-feedback" id="last-name-valid">
+          Proceed!
+        </div>
+      </div>
+      <div class="col-md-4">
+        <label for="E-mail" class="form-label">E-mail<span style="color: red;">*</span></label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">@</span>
+          <input type="text" class="form-control" id="E-mail" aria-describedby="inputGroupPrepend" placeholder="E-mail*"
+            autocomplete="off">
+          <div class="invalid-feedback" id="email-invalid">
+            Please Enter a Valid E-mail.
+          </div>
+        </div>
+        <div class="valid-feedback" id="email-valid">
+          Proceed!
+        </div>
+      </div>
+      <div class="col-md-6">
+        <label for="Phone" class="form-label">Phone Number<span style="color: red;">*</span></label>
+        <div class="input-group has-validation">
+          <span class="input-group-text" id="inputGroupPrepend">+91</span>
+          <input type="text" class="form-control" id="Phone" placeholder="Phone Number*" autocomplete="off">
+          <div class="invalid-feedback" id="Phone-invalid">
+            Please provide a valid Phone Number.
+          </div>
+        </div>
+        <div class="valid-feedback" id="Phone-valid">
+          Proceed!
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="Batch-Number" class="form-label">Batch Number<span style="color: red;">*</span></label>
+        <select class="form-select" id="batch">
+          <option selected disabled value="">Select Batch...</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+        </select>
+        <div class="invalid-feedback" id="batch-invalid">
+          Please select a valid Batch.
+        </div>
+        <div class="valid-feedback" id="batch-valid">
+          Proceed!
+        </div>
+      </div>
+      <div class="col-md-3">
+        <label for="Current-Module" class="form-label">Current Module<span style="color: red;">*</span></label>
+        <select class="form-select" id="module">
+          <option selected disabled value="">Select Module...</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+        </select>
+        <div class="invalid-feedback" id="module-invalid">
+          Please select a valid Module.
+        </div>
+        <div class="valid-feedback" id="module-valid">
+          Proceed!
+        </div>
+      </div>
+      <div class="col-12">
+        <div class="form-check">
+          <div class="agree">
+            READ THE TERMS AND CONDITIONS <span style="color: white; cursor: pointer;" onclick="agree()"><u>HERE</u></span> BEFORE AGREE
+            <!-- <a href="" style="color: white;" onclick="agree()"> HERE</a> -->
+          </div>
+          <input class="form-check-input" type="checkbox" value="" id="tnC" onclick="checkedOrNot()">
+          <label class="form-check-label" for="tnC">
+            Agree to terms and conditions
+          </label>
+          <div class="invalid-feedback" id="tnC-invalid">
+            You must agree before submitting the form.
+          </div>
+          <div class="valid-feedback" id="tnC-valid">
+            Proceed!
+          </div>
+        </div>
+      </div>
+      <div class="col-12 submit-btn" id="buttons">
+        <button class="btn btn-dark btn-lg" type="button" onclick="validate()">Submit form</button>
+      </div>
+    </form>
+    <div><br>
+      <h3><a href="#" style="color:white;text-decoration: none;font-size: 50px;" onclick="home()" id="home">Back to
+          home-></a></h3>
+    </div>
+  </div>
+
+  <!--------------------------------           TERMS AND CONDITIONS PAGE            -------------------------->
+  <div class="terms_and_conditions">
+    <div class="agree">
+      <h2>
+        School Scholarships - Eligibility:
+      </h2>
+      <p>
+        Each school scholarship comes with certain pre-defined set of eligibility conditions. These conditions are
+        generally based on students' academic qualification and financial conditions. At times, some scholarship are
+        also restricted to specific geographical locations. To get a detailed idea of the eligibility criteria for all
+        school scholarships, go through the table given below. It provides you with in-depth information on scholarship
+        eligibility.
+      </p>
+      <h3>Detailed Eligibility of School Scholarships:</h3>
+      <div class="tables">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">
+                <h5>S.No.</h5>
+              </th>
+              <th scope="col">
+                <h5>Scholarship Name</h5>
+              </th>
+              <th scope="col">
+                <h5>Eligibility</h5>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Kind Scholarship for Meritorious Students</td>
+              <td>
+                <b>A.</b> Students studying at school and college level (Class 9 to 12, graduation, diploma,
+                professional, ITI, Polytechnic, or Vocational courses) can apply.
+                <br>
+                <b>B. </b>The minimum percentage requirement in the last qualifying examination is 60% marks.
+                <br>
+                <b>C. </b>The annual family income should not exceed INR 4 Lakhs.
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td>	Ujjwal Bhavishya Scholarship</td>
+              <td>
+                <b>A.</b> Students aged from 14 years to 16 years can apply.
+                <br>
+                <b>B. </b>They must have passed class 10 examination in 2019 with more than 75% marks.
+                <br>
+                <b>C. </b>The annual family income should be less than INR 2 Lakhs. <br>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td>L'Oréal India For Young<br> Women  in Science <br> Scholarships</td>
+              <td>
+                <b>A.</b> Women candidates taking admission in bachelor's degree course in science-related fields can apply.
+                <br>
+                <b>B. </b>They must have passed class 12 in PCM/PCB/PCMB with at least 85% marks.
+                <br>
+                <b>C. </b>The annual income of the family should be less than INR 4 Lakhs.
+                <b>D. </b>The age of the candidates must be 19 years or below. <br>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">4</th>
+              <td>HDFC Bank Educational Crisis Scholarship Support</td>
+              <td>
+                <b>A.</b> The students of class 6 and above can apply for this scholarship.
+                <br>
+                <b>B. </b>They must be facing a family or personal crisis that has occurred during the last three years, due to which they are unable to bear the cost of education and are at the risk of dropping out.
+                <br>
+                
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">5</th>
+              <td>JBNSTS Junior Scholarship Program</td>
+              <td>
+                <b>A.</b> The students, who have passed their class 10 examination with aggregate 75% marks can apply for this scholarship.
+                <br>
+                <b>B. </b>They must have taken admission in class 11 (Science stream) in an institution in West Bengal.
+                <br>
+                <b>C. </b>They must opt for at least 3 subjects from Physics, Chemistry, Biology, Mathematics, Statistics, and Computer Science.
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">6</th>
+              <td>National Scholarship Exam (NSE)</td>
+              <td>
+                <b>A.</b> The students studying in class 5 to 12 from SSC/ ICSE/ CBSE board schools can apply.
+                <br>
+                <b>B. </b>Also, the students pursuing a diploma or degree course in any stream can apply.
+                <br>
+              </td>
+            </tr>
+            <tr>
+              <th scope="row">7</th>
+              <td>Bose Einstein Scholarship Test</td>
+              <td>
+                <b>A.</b> To appear for foundation level, the students must be of class 7 and 8.
+                <br>
+                <b>B. </b>To appear for intermediate level, the students must be of class 9 and 10.
+                <br>
+                <b>C. </b>To appear for upper intermediate level, the students must be of class 11 and 12.
+                <br>
+                <b>D. </b>To appear for major level, the students must be of undergraduate level.
+                <br>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="register_page" onclick="regPage()">
+          <span>Go Back To The Form-></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--------------------------------          THANK YOU FOR REGISTER PAGE           -------------------------->
+
+  <div class="last">
+    <div class="thanks"><br><br><br><br><br><br><br><br><br><br>
+      <h3>Thank you Register For</h3>
+      <h4>Admission in <span style="color: orange;">My School</span></h4>
+      <button>
+        <h6 style="margin-top: 6px;color:white ;">"We'll get in touch with you soon"</h6>
+      </button>
+      <h3><a href="#" style="color:white;text-decoration: none;" onclick="home()">Back to home-></a></h3>
+    </div>
+  </div>
+
+  <!--------------------------------           COPYRIGHT FOR ALL THE PAGES            -------------------------->
+
+  <div class="Pushpa-Leela-Kumari">
+    <button><b>Copyrights © 2021 All Rights Reserved, Made with 💖 by Pushpa Leela Kumari</b></button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+    integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+    integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>

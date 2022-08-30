@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background: black url(test_background.jpg);
+    height: 130vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container_back {
+    margin-left: 90px;
+    margin-right: 90px;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(My_school.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90%;
+    border: 5px solid black;
+    border-radius: 20px;
+}
+
+#nav {
+    border-radius: 10px !important;
+    background-color: rgba(255, 166, 0, 0.775) !important;
+}
+
+.content {
+    color: white;
+    text-align: center;
+    margin-top: 24%;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: serif;
+}
+.buttons button {
+    padding: 10px;
+    width: 200px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: orange !important;
+}
+.buttons button:hover {
+    transition: 0.9s;
+    background-color: rgba(0, 0, 0, 0.528) !important;
+    color: white;
+}
+.buttons h5{
+    margin-top: 3px;
+}
+.Pushpa-Leela-Kumari{
+    text-align: center;
+    background: url(test_background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+}
+.Pushpa-Leela-Kumari button{
+    border-radius: 15px;
+    padding: 5px;
+    border: 1px solid white;
+    /* background-color: orange; */
+    background: url(test_background.jpg);
+    background-position: center;
+    color: white;
+    
+}
+.register{
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(My_school.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 90%;
+    color: orange;
+    font-family: serif;
+    height: 120vh;
+}
+.Registration-form {
+    width: 900px;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  #form{
+    margin: 10px;
+    margin-right: 20%;
+    margin-left: 20%;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+    border-radius: 20px;
+    height: 500px;
+  }
+  #home{
+    font-family: "Brush Script MT", cursive,sans-serif;
+  }
+.form-group input{
+    width: 400px;
+    align-items: center !important;
+}
+.login input{
+    justify-items: center;
+
+}
+@media only screen and (max-width: 900px) {
+    .content {
+        text-align: center !important;
+        margin-top: 50% !important;
+        margin-left: 49% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+    .buttons button{
+        text-align: center !important;
+        align-items: center;
+        width: 120px !important;
+        border-radius: 10px;
+        padding: 0px;
+    }
+
+    .register h1 {
+        width: 300px;
+        text-align: center;
+        font-size: 30px !important;
+    }
+    #form{
+        height: 830px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .register{
+        height: 1000px;
+    }
+    .navbar-brand{
+        display: none;
+    }
+}
+@media only screen and (max-width: 700px) {
+    .content {
+        text-align: center !important;
+        margin-top: 70% !important;
+        margin-left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    .register h1 {
+        width: 300px !important;
+        text-align: center;
+        font-size: 30px !important;
+    }
+    #form{
+        height: 900px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+    .register{
+        height: 200vh;
+    }
+    .navbar-brand{
+        display: none;
+    }
+}
+.submit-btn{
+    text-align: center;
+    }
+  .container input::placeholder{
+    color: rgba(128, 128, 128, 0.394);
+  }
+  @media screen and (max-width: 900px) {
+      .Registration-form{
+        text-align: left;
+        width: 900px;
+        margin: auto;
+        margin-bottom: 30px;
+      }
+  }
+  #buttons button:hover{
+    transition: 0.8s;
+    background-color: rgba(255, 166, 0, 0.736) !important;
+    color: white;
+  }
+  .register{
+    display: none;
+  }
+  .thanks{
+    text-align: center;
+  }
+  
+  .last{
+    background: rgba(0, 0, 255, 0.8) url(test_background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    /* font-family: "Brush Script MT", cursive */
+  }
+  .thanks h3{
+    font-family: "Brush Script MT", cursive,sans-serif;
+    font-size: 50px;
+    color: orange;
+    
+  }
+  .thanks h4{
+    font-family: serif,sans-serif;
+    color: white;
+  }
+  /* .thanks span h6{
+    background-color: orange;
+    color: white;
+  } */
+  .thanks button{
+    background-color: orange;
+    border-radius: 20px;
+    padding: 3px;
+    border: 0.5px solid white;
+    cursor: none;
+  }
+  .last{
+    display: none;
+  }
+  .terms_and_conditions{
+    background: url(test_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    display: none; 
+  }
+  table{
+    border-radius: 10px;
+    border: 3px solid orange !important;
+    border-collapse: collapse;
+    border-color: orange;
+    padding: 10px;
+    color: white !important;
+  }
+  .tables{
+    margin: 10px;
+    color: white ;
+  }
+  .register_page span{
+    /* font-family: sans-serif; */
+    cursor: pointer;
+    font-size: 35px;
+    font-family: serif;
+  }
